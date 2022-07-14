@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Support\**" />
+    <Compile Remove="新しいフォルダー1\**" />
+    <Compile Remove="新しいフォルダー2\**" />
+    <EmbeddedResource Remove="Support\**" />
+    <EmbeddedResource Remove="新しいフォルダー1\**" />
+    <EmbeddedResource Remove="新しいフォルダー2\**" />
+    <None Remove="Support\**" />
+    <None Remove="新しいフォルダー1\**" />
+    <None Remove="新しいフォルダー2\**" />
+    <Page Remove="Support\**" />
+    <Page Remove="新しいフォルダー1\**" />
+    <Page Remove="新しいフォルダー2\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="DefaultThumbnail.png" />
+    <None Remove="uwCJgLAz_400x400.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="DefaultThumbnail.png" />
+    <Resource Include="uwCJgLAz_400x400.jpg" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,6 @@
+TagName Tag1,TagThumbnail DefaultThumbnail.png,
+TagName Tag2,TagThumbnail DefaultThumbnail.png,
+TagName Tag3,TagThumbnail DefaultThumbnail.png,
+TagName Tag4,TagThumbnail DefaultThumbnail.png,
+TagName Tag5,TagThumbnail DefaultThumbnail.png,
+TagName Tag6,TagThumbnail DefaultThumbnail.png,

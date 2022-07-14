@@ -1,0 +1,69 @@
+﻿<Window x:Class="JustDnaceManeger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JustDnaceManeger"
+        mc:Ignorable="d"
+        Title="JustDunceManeger" Height="450" Width="800" HorizontalAlignment="Left" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" MinWidth="585" MinHeight="320">
+    <Grid x:Name="grid" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" MinWidth="250" MaxWidth="250"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="366*" MinWidth="100"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="215" MinWidth="215" MaxWidth="215"/>
+        </Grid.ColumnDefinitions>
+        <ScrollViewer x:Name="TagScrollView" Grid.Column="0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Stretch">
+            <StackPanel Width="235" x:Name="SearchTagsMainStackPanel" Orientation="Vertical" HorizontalAlignment="Stretch" >
+                <TextBlock HorizontalAlignment="Left" Text="検索" TextWrapping="Wrap" VerticalAlignment="Top"  Margin="0,0,0,10"/>
+                <TextBlock HorizontalAlignment="Left" Text="曲名検索(部分一致)" TextWrapping="Wrap" VerticalAlignment="Top" />
+                <TextBox Name="SearchDanceTitleTextBox" TextWrapping="Wrap" Margin="0,0,0,5" TextChanged="SearchDanceTitleTextBox_TextChanged"/>
+                <TextBlock HorizontalAlignment="Left" Text="メモ検索(部分一致)" TextWrapping="Wrap" VerticalAlignment="Top" />
+                <TextBox Name="SearchMemoTextBox" TextWrapping="Wrap" Margin="0,0,0,5" TextChanged=" SearchDanceTitleTextBox_TextChanged"/>
+            </StackPanel>
+        </ScrollViewer>
+        <GridSplitter Grid.Column="1" VerticalAlignment="Stretch" Width="2" HorizontalAlignment="Center" />
+        <ScrollViewer Grid.Column="2" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Stretch">
+            <StackPanel Orientation="Vertical" ScrollViewer.HorizontalScrollBarVisibility="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Focusable="True">
+                <TextBlock Text="検索結果" TextWrapping="Wrap" VerticalAlignment="Top" AllowDrop="False" Focusable="False" Margin="0,0,0,20" HorizontalAlignment="Stretch"/>
+                <ListView x:Name="SearchDanceListView" ItemsSource="{Binding}" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto" HorizontalAlignment="Stretch" MouseDoubleClick="SearchDanceListView_MouseDoubleClick" Focusable="False">
+                    <ListView.View >
+                        <GridView x:Name="SearchResultColumGridView">
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=DanceNumber}"  Width="45">
+                                <GridViewColumnHeader Content="曲番号" Tag="DanceNumber" />
+                            </GridViewColumn>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=DanceTitle}"  Width="150">
+                                <GridViewColumnHeader Content="曲名"  Tag="DanceTitle" />
+                            </GridViewColumn>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=DanceMemo}"  Width="110">
+                                <GridViewColumnHeader Content="メモ" Tag="DanceMemo"/>
+                            </GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </StackPanel>
+        </ScrollViewer>
+        <GridSplitter Grid.Column="3" VerticalAlignment="Stretch" Width="2" HorizontalAlignment="Center" />
+        <ScrollViewer x:Name="DetailScrollView" Grid.Column="4" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Stretch">
+            <StackPanel Width="198" x:Name="DetailMainStackPanel" Orientation="Vertical" HorizontalAlignment="Left">
+                <TextBox HorizontalAlignment="Left" Text="詳細" TextWrapping="Wrap" VerticalAlignment="Top"  BorderThickness="0,0,0,0" Margin="0,0,0,10"/>
+                <Image Name="DanceImage" Height="108" HorizontalAlignment="Left" VerticalAlignment="Top" Width="198" Stretch="Fill" StretchDirection="Both" AllowDrop="True" Focusable="True" DragOver="DancePicture_DragOver" Drop="DancePicture_Drop"/>
+                <Button Name="DancePictureChoseButton" Content="画像選択" Margin="0,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Top" Click="DancePictureChoiceButton_Click"/>
+                <TextBlock HorizontalAlignment="Left" Text="曲名：" TextWrapping="Wrap" VerticalAlignment="Top"  />
+                <TextBox Name="DanceTitleTextBox" TextWrapping="Wrap" Margin="0,0,0,5"/>
+                <TextBlock HorizontalAlignment="Left" Text="曲番号：" TextWrapping="Wrap" VerticalAlignment="Top" />
+                <TextBox Name="DanceNumberTextBox" TextWrapping="Wrap" Margin="0,0,0,20"/>
+                <TextBlock Name="DanceDataTextBox" HorizontalAlignment="Left" Text="最終更新日時：----/--/--/--:--:--" TextWrapping="Wrap" VerticalAlignment="Top" />
+                <Button Name="RegsterButton" Content="修正/登録" Margin="0,0,0,20" HorizontalAlignment="Left" VerticalAlignment="Top" Click="RegsterButton_Click"/>
+                <StackPanel Width="198" x:Name="youtubeURLStackPanel" Orientation="Horizontal" HorizontalAlignment="Left">
+                    <TextBlock HorizontalAlignment="Left" Text="参照URL：" TextWrapping="Wrap" VerticalAlignment="Center" />
+                    <Button Name="URL_GoButton" Content="Go URL" Click="URL_GoButton_Click" />
+                </StackPanel>
+                <TextBox Name="youtubeURL" TextWrapping="Wrap" Margin="0,0,0,5"/>
+                <TextBlock HorizontalAlignment="Left" Text="メモ" TextWrapping="Wrap" VerticalAlignment="Top"  />
+                <TextBox Name="DanceMemoTextBox" TextWrapping="Wrap" Margin="0,0,0,5"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
