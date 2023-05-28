@@ -23,6 +23,16 @@ namespace JustDnaceManeger
             dataManegerCls.goWebSite(youtubeURL.Text);
         }
 
+        //入力済みURLコピーボタン
+        private void URL_CopyButton_Click(object sender, RoutedEventArgs e)
+        {
+            var text = youtubeURL.Text;
+            if ((text != null) && (text != ""))
+            {
+                Clipboard.SetDataObject(text, true);
+            }
+        }
+
         //画像選択ボタン
         private void DancePictureChoiceButton_Click(object sender, RoutedEventArgs e)
         {

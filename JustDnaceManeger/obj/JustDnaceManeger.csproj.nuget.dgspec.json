@@ -10,7 +10,7 @@
         "projectUniqueName": "Z:\\git\\JustDnaceManeger\\JustDnaceManeger\\JustDnaceManeger.csproj",
         "projectName": "JustDnaceManeger",
         "projectPath": "Z:\\git\\JustDnaceManeger\\JustDnaceManeger\\JustDnaceManeger.csproj",
-        "packagesPath": "C:\\Users\\fland\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\ASHU\\.nuget\\packages\\",
         "outputPath": "Z:\\git\\JustDnaceManeger\\JustDnaceManeger\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
@@ -18,7 +18,7 @@
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\fland\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ASHU\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -63,7 +63,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
         }
       }
     }

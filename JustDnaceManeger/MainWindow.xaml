@@ -59,6 +59,7 @@
                 <StackPanel Width="198" x:Name="youtubeURLStackPanel" Orientation="Horizontal" HorizontalAlignment="Left">
                     <TextBlock HorizontalAlignment="Left" Text="参照URL：" TextWrapping="Wrap" VerticalAlignment="Center" />
                     <Button Name="URL_GoButton" Content="Go URL" Click="URL_GoButton_Click" />
+                    <Button Name="URL_CopyButton" Content="URL　Copy" Click="URL_CopyButton_Click" Margin="30,0,0,0" />
                 </StackPanel>
                 <TextBox Name="youtubeURL" TextWrapping="Wrap" Margin="0,0,0,5"/>
                 <TextBlock HorizontalAlignment="Left" Text="メモ" TextWrapping="Wrap" VerticalAlignment="Top"  />
